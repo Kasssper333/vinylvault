@@ -12,7 +12,6 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/create', [AlbumController::class, 'create'])->name('create');
     Route::post('/store', [AlbumController::class, 'store'])->name('store');
     
-    // БЕЗ {id} - просто форма редактирования
     Route::get('/edit', [AlbumController::class, 'edit'])->name('edit');
     Route::put('/update', [AlbumController::class, 'update'])->name('update');
     
