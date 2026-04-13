@@ -14,7 +14,6 @@ return new class extends Migration
         Schema::create('album-logs', function (Blueprint $table) {
              $table->id();
             
-            // Внешние ключи
             $table->foreignId('album_id')
                   ->constrained('albums')
                   ->onDelete('set null');
@@ -23,7 +22,6 @@ return new class extends Migration
                   ->constrained('users')
                   ->onDelete('set null');
             
-            // Логируемые данные
             $table->enum('action', ['created', 'updated', 'deleted', 'restored'])
                   ->default('created');
             
