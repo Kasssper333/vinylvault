@@ -3,9 +3,6 @@ document.getElementById('searchBtn').addEventListener('click', function() {
     const msgDiv = document.getElementById('searchMessage');
     const url = this.getAttribute('data-url');
 
-    console.log('Кнопка нажата, ищем:', albumTitle);  // 👈 Отладка
-    console.log('URL:', url);  // 👈 Отладка
-
     if (!albumTitle) {
         msgDiv.className = 'search-message error';
         msgDiv.innerHTML = '❌ Please enter album title';
@@ -26,7 +23,6 @@ document.getElementById('searchBtn').addEventListener('click', function() {
     })
     .then(response => response.json())
     .then(data => {
-        console.log('Ответ:', data);  // 👈 Отладка
         if (data.success) {
             document.getElementById('album_id').value = data.album.id;
             document.getElementById('artist').value = data.album.artist;
@@ -45,7 +41,6 @@ document.getElementById('searchBtn').addEventListener('click', function() {
         setTimeout(() => { msgDiv.className = 'search-message'; }, 3000);
     })
     .catch(error => {
-        console.error('Error:', error);  // 👈 Отладка
         msgDiv.className = 'search-message error';
         msgDiv.innerHTML = '❌ Connection error';
         setTimeout(() => { msgDiv.className = 'search-message'; }, 3000);
