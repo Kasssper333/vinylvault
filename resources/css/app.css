@@ -166,19 +166,6 @@ a{
     margin: auto;
 }   
     
-.lastfm-link {
-    display: inline-block;
-    font-family: monospace;
-    font-size: 13px;
-    color: rgb(114, 137, 255);
-    text-decoration: none;
-    margin-top: 10px;
-}
-    
-.lastfm-link:hover {
-    text-decoration: underline;
-}
-    
 .pagination nav {
     display: inline-block;
 }
@@ -186,6 +173,11 @@ a{
 .pagination .page-item {
     display: inline-block;
      margin: 0 5px;
+}
+
+.pagination {
+    margin-top: 40px;
+    text-align: center;
 }
     
 .pagination .page-link {
@@ -329,9 +321,4 @@ hr {
     
 .lastfm-link:hover {
     text-decoration: underline;
-}
-    
-.pagination {
-    margin-top: 40px;
-    text-align: center;
 }
