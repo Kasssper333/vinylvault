@@ -11,7 +11,6 @@ class Albums extends Model
      public $timestamps = false;
     use HasFactory, SoftDeletes;
     
-    // 👇 ДОБАВЬ ЭТОТ МАССИВ
     protected $fillable = [
         'title',
         'artist',
@@ -21,9 +20,6 @@ class Albums extends Model
         'created_by',
         'updated_by',
     ];
-    
-    // Если хочешь защитить все поля (обратное)
-    // protected $guarded = [];
     
     public function creator()
     {
